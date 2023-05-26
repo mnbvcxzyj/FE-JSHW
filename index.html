@@ -10,6 +10,7 @@
     #container {
       max-width: 1280px;
       margin: 0px auto;
+      text-align: center;
       min-height: 100vh;
       background: #902443;
       position: relative;
@@ -33,8 +34,90 @@
 
     img {
       display: block;
-      width: 81px;
+      width: 80px;
       margin: 0 auto;
+    }
+
+    #text1 {
+      display: block;
+      font-family: "Pretendard";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 24px;
+
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+
+      color: #5e162b;
+    }
+
+    #inputDiv {
+      position: relative;
+      font-family: "Pretendard";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+
+      color: #000000;
+
+      padding-top: 1rem;
+    }
+
+    #rec {
+      width: 10px;
+      border: 3.5px solid #dc7190;
+      transform: rotate(90deg);
+      margin-right: 0.5rem;
+    }
+
+    #text2 {
+      position: relative;
+      margin-left: rem;
+    }
+
+    #name {
+      width: 210px;
+      height: 35px;
+      margin-top: 10px;
+
+      border-radius: 50px;
+      background: #cd99a6;
+
+      border: 0;
+      padding-left: 10px;
+      outline: none;
+    }
+
+    #tel {
+      width: 210px;
+      height: 35px;
+      margin-top: 10px;
+
+      border-radius: 50px;
+      background: #cd99a6;
+
+      border: 0;
+      padding-left: 10px;
+      outline: none;
+    }
+
+    #btn {
+      font-family: "Pretendard";
+      font-style: normal;
+      font-weight: 700;
+      line-height: 25px;
+      width: 93px;
+      height: 36px;
+
+      background: #902443;
+      border-radius: 10px;
+      color: #ffffff;
+      cursor: pointer;
+      margin-top: 2rem;
+
+      border: 0;
     }
   </style>
   <body>
@@ -43,7 +126,23 @@
         <div id="logo">
           <img src="/images/ddwu_logo.png" alt="동덕멋사로고이미지" />
         </div>
+        <span id="text1"
+          >동덕여자대학교 멋쟁이사자처럼<br />
+          11기 아기사자 합격자 발표</span
+        >
+  
+        <div id="inputDiv">
+          <div><span id="rec"></span> <span id="text2">성함</span></div>
+          <input type="text" id="name" />
+        </div>
+        <div id="inputDiv">
+          <div><span id="rec"></span> <span id="text2">전화번호</span></div>
+          <input type="tel" id="tel" placeholder="(ex) 010-1234-5678"  />
+        </div>
+        <button type="submit" id="btn">입력</input>
       </div>
+
     </div>
+    <script src="/js/check.js"></script>
   </body>
 </html>
