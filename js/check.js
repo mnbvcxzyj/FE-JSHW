@@ -12,30 +12,32 @@ var dataFile = [
 ];
 
 // 값 가져오기
-let elName = document.getElementById("name").value;
-let elTel = document.getElementById("tel").value;
 let elBtn = document.getElementById("btn");
 
 function checkPass() {
-    console.log(elName)
-    // for (let i = 0; i < dataFile.length; i++) {
-    //     if (elName == dataFile[i].name && elTel == dataFile[i].phone && dataFile[i].pass == 1) {
-    //         console.log(elName, elTel, i)
-    //         location.href = 'pass.html'
-    //         break;
-    //     }
-    //     else if (elName == dataFile[i].name && elTel == dataFile[i].phone && dataFile[i].pass == 0) {
-    //         console.log(elName, elTel, i)
-    //         location.href = 'fail.html'
-    //         break;
-    //     }
-    //     else if (i == dataFile.length - 1) {
-    //         console.log(elName, elTel, i)
-    //         alert("등록되지 않은 성함과 전화번호 입니다. \n성함과 번호를 다시 한 번 확인해주세요! 🦁");
-    //         break;
-    //     }
+    let elName = document.getElementById("name").value;
+    let elTel = document.getElementById("tel").value;
 
-    // }
+    for (let i = 0; i < dataFile.length; i++) {
+        if (elName == dataFile[i].name && elTel == dataFile[i].phone && dataFile[i].pass == 1) {
+            console.log(elName, elTel, i)
+            window.location.href = "/pages/pass.html"
+            break;
+        }
+        else if (
+            elName == dataFile[i].name &&
+            elTel == dataFile[i].phone &&
+            dataFile[i].pass == 0
+        ) {
+            window.location.href = "/pages/fail.html"
+            break;
+        }
+        else if (i == dataFile.length - 1) {
+            alert("등록되지 않은 성함과 전화번호 입니다. \n성함과 번호를 다시 한 번 확인해주세요! 🦁");
+            break;
+        }
+
+    }
 
 }
 
